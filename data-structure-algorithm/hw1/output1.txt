@@ -1,0 +1,7 @@
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+
+Harvested kiwis: 23
+Rotten kiwis: 1

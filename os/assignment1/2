@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/wait.h>
+#include <iostream>
+#include <fstream>
+
+
+using namespace std;
+
+
+int main(){
+
+	int count = 5;
+	string line1 = "192.168.1.1 255.255.255.0";
+	string line2 = "10.0.127.24 255.255.255.240";
+	string line3 = "172.17.0.1 255.240.0.0";
+	string line4 = "127.24.35.254 255.192.0.0";
+	string line5 = "192.168.243.24 255.255.248.0";
+	
+	string lines[count];
+
+	int fd[2];
+
+	pid_t pid = fork();
+
+	fstream file;
+	file.open('input.txt');
+	string c;
+	while(file >> c){
+		cout<<c<<" "<<endl;	
+	}
+
+	return 0;
+
+//	if ( pipe(fd) < 0){	
+//		//error creating pipe
+//		exit(1);
+//	}
+//
+//	if(pid > 0){
+//		close(pipe[0]);
+//		string toSend = line1;
+//
+//		
+//		write(pipe[1], line1, sizeof(line1));	
+//		wait(NULL);
+//		return 0;
+//	} else if(pid == 0){
+//		//int nbytes = read[pipe[0], 
+//	} else {
+//		return -1;	
+//	} 
+}
+
+
